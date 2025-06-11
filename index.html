@@ -15,7 +15,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #01579b 100%);
             min-height: 100vh;
         }
 
@@ -26,7 +26,7 @@
         }
 
         header {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(13, 32, 64, 0.95);
             color: white;
             padding: 1rem 0;
             position: fixed;
@@ -34,6 +34,7 @@
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(10px);
+            border-bottom: 2px solid #d4af37;
         }
 
         nav {
@@ -45,7 +46,8 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #f7931a;
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
         }
 
         .nav-links {
@@ -55,13 +57,15 @@
         }
 
         .nav-links a {
-            color: white;
+            color: #e3f2fd;
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: 500;
         }
 
         .nav-links a:hover {
-            color: #f7931a;
+            color: #ffd700;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
         }
 
         main {
@@ -72,22 +76,24 @@
         .hero {
             text-align: center;
             padding: 4rem 0;
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(13, 32, 64, 0.8) 100%);
             border-radius: 20px;
             margin-bottom: 3rem;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
 
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: #ffd700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
         }
 
         .hero p {
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(227, 242, 253, 0.95);
             margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
@@ -96,19 +102,22 @@
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(45deg, #f7931a, #ff6b35);
-            color: white;
+            background: linear-gradient(45deg, #d4af37, #ffd700, #b8860b);
+            color: #0d2040;
             padding: 1rem 2rem;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
             font-size: 1.1rem;
             transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            border: 2px solid #d4af37;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(247, 147, 26, 0.3);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #d4af37);
         }
 
         .stats-section {
@@ -119,184 +128,53 @@
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(227, 242, 253, 0.95) 100%);
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(13, 32, 64, 0.2);
             transition: transform 0.3s;
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         .stat-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(13, 32, 64, 0.3);
         }
 
         .stat-number {
             font-size: 3rem;
             font-weight: bold;
-            color: #f7931a;
+            color: #b8860b;
             margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(184, 134, 11, 0.2);
         }
 
         .section {
-            background: rgba(255, 255, 255, 0.95);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(227, 242, 253, 0.95) 100%);
             margin: 3rem 0;
             padding: 3rem;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(13, 32, 64, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         .section h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: #333;
+            color: #0d2040;
             text-align: center;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background: linear-gradient(to bottom, #f7931a, #ff6b35);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-            border-radius: 3px;
-        }
-
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background: inherit;
-            width: 50%;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            right: -17px;
-            background: #f7931a;
-            border: 4px solid white;
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .left {
-            left: 0;
-        }
-
-        .right {
-            left: 50%;
-        }
-
-        .right::after {
-            left: -16px;
-        }
-
-        .timeline-content {
-            padding: 20px 30px;
-            background: white;
-            position: relative;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .learning-modules {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .module-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .module-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
-            pointer-events: none;
-        }
-
-        .module-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .module-number {
-            font-size: 3rem;
-            font-weight: bold;
-            opacity: 0.3;
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-
-        .module-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .module-card p {
-            position: relative;
-            z-index: 1;
-            opacity: 0.9;
-        }
-
-        .progress-tracker {
-            background: rgba(247, 147, 26, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 20px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 1rem 0;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(45deg, #f7931a, #ff6b35);
-            width: 0%;
-            transition: width 1s ease;
-            border-radius: 10px;
+            font-weight: 700;
         }
 
         .dca-calculator {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #0d2040 0%, #1a237e 50%, #0d47a1 100%);
             color: white;
             padding: 3rem;
             border-radius: 20px;
             margin: 3rem 0;
+            border: 2px solid #d4af37;
+            box-shadow: 0 20px 40px rgba(13, 32, 64, 0.4);
         }
 
         .calculator-grid {
@@ -314,22 +192,33 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: bold;
+            color: #ffd700;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         .input-group input, .input-group select {
             width: 100%;
             padding: 0.75rem;
-            border: none;
+            border: 2px solid #d4af37;
             border-radius: 10px;
             font-size: 1rem;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
+            color: #0d2040;
+            font-weight: 500;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
         }
 
         .result-display {
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
             padding: 2rem;
             border-radius: 15px;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.4);
         }
 
         .result-item {
@@ -337,141 +226,26 @@
             justify-content: space-between;
             margin-bottom: 1rem;
             font-size: 1.1rem;
+            color: #e3f2fd;
+            font-weight: 500;
+        }
+
+        .result-item span:last-child {
+            color: #ffd700;
+            font-weight: bold;
         }
 
         .result-highlight {
             font-size: 2rem;
             font-weight: bold;
-            color: #f7931a;
+            color: #ffd700;
             text-align: center;
             margin-top: 1rem;
-        }
-
-        .institutional-adoption {
-            background: linear-gradient(135deg, #434343 0%, #000000 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 20px;
-            margin: 3rem 0;
-        }
-
-        .adoption-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .company-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-        }
-
-        .company-logo {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background: white;
-            margin: 5% auto;
-            padding: 3rem;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 800px;
-            max-height: 80vh;
-            overflow-y: auto;
-            position: relative;
-        }
-
-        .close {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #666;
-        }
-
-        .close:hover {
-            color: #f7931a;
-        }
-
-        .module-content {
-            line-height: 1.8;
-        }
-
-        .module-content h3 {
-            color: #f7931a;
-            margin: 2rem 0 1rem;
-        }
-
-        .module-content ul {
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-
-        .module-content li {
-            margin-bottom: 0.5rem;
-        }
-
-        .quiz-section {
-            background: rgba(247, 147, 26, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-        }
-
-        .quiz-question {
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
-
-        .quiz-options {
-            display: grid;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .quiz-option {
-            padding: 0.75rem;
-            background: white;
-            border: 2px solid transparent;
+            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+            background: rgba(13, 32, 64, 0.3);
+            padding: 1rem;
             border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .quiz-option:hover {
-            border-color: #f7931a;
-        }
-
-        .quiz-option.selected {
-            background: #f7931a;
-            color: white;
+            border: 1px solid #d4af37;
         }
 
         @media (max-width: 768px) {
@@ -479,37 +253,39 @@
                 font-size: 2.5rem;
             }
             
-            .nav-links {
-                display: none;
-            }
-            
-            .timeline::after {
-                left: 31px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            
-            .timeline-item::before {
-                left: 60px;
-                border: medium solid white;
-                border-width: 10px 10px 10px 0;
-                border-color: transparent white transparent transparent;
-            }
-            
-            .left::after, .right::after {
-                left: 15px;
-            }
-            
-            .right {
-                left: 0%;
-            }
-            
             .calculator-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        /* Professional touches */
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #ffd700, #b8860b);
+            border-radius: 15px 15px 0 0;
+        }
+
+        .stat-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle gold accent animations */
+        .logo:hover {
+            animation: goldGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes goldGlow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
             }
         }
     </style>
@@ -520,10 +296,7 @@
             <div class="logo">₿ The Bitcoin Chronicles</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#evolution">Evolution</a></li>
-                <li><a href="#modules">Modules</a></li>
                 <li><a href="#calculator">DCA Calculator</a></li>
-                <li><a href="#adoption">Adoption</a></li>
             </ul>
         </nav>
     </header>
@@ -532,7 +305,7 @@
         <section id="home" class="hero">
             <h1>The Bitcoin Chronicles</h1>
             <p>Master Bitcoin from basics to building your own reserve. Learn why institutions like BlackRock are accumulating billions in Bitcoin and how you can start your journey today.</p>
-            <a href="#modules" class="cta-button">Start Learning Now</a>
+            <a href="#calculator" class="cta-button">Start Learning Now</a>
         </section>
 
         <div class="stats-section">
@@ -554,113 +327,9 @@
             </div>
         </div>
 
-        <section id="evolution" class="section">
-            <h2>The Evolution of Money</h2>
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>3000 BC - Barter System</h3>
-                        <p>Direct exchange of goods and services without a medium of exchange. Limited by the double coincidence of wants.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>2000 BC - Commodity Money</h3>
-                        <p>Shells, cattle, and precious metals used as store of value. First standardized units of account.</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>700 BC - First Coins</h3>
-                        <p>Lydians created the first official currency made from electrum (gold-silver alloy). Government backing of money begins.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>1000 AD - Paper Money</h3>
-                        <p>China introduces paper currency backed by gold reserves. Portability and convenience improved.</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>1971 - Nixon Shock</h3>
-                        <p>US ends gold standard. Fiat currency era begins with money backed only by government promise.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>2008 - Bitcoin Genesis</h3>
-                        <p>Satoshi Nakamoto creates Bitcoin: the first decentralized, digital, sound money with a fixed supply of 21 million.</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>2024 - Institutional Adoption</h3>
-                        <p>Major corporations and institutions like BlackRock, MicroStrategy, and nation-states accumulate Bitcoin reserves.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="modules" class="section">
-            <h2>Learning Modules</h2>
-            <p style="text-align: center; margin-bottom: 2rem; font-size: 1.2rem;">Progress through our comprehensive curriculum to master Bitcoin</p>
-            
-            <div class="progress-tracker">
-                <h3>Your Progress</h3>
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-                <p><span id="progressText">0% Complete</span> - Keep learning to unlock your Bitcoin potential!</p>
-            </div>
-
-            <div class="learning-modules">
-                <div class="module-card" onclick="openModule('module1')">
-                    <div class="module-number">01</div>
-                    <h3>What is Bitcoin?</h3>
-                    <p>Understand the fundamentals of Bitcoin, blockchain technology, and why it was created.</p>
-                </div>
-                <div class="module-card" onclick="openModule('module2')">
-                    <div class="module-number">02</div>
-                    <h3>Bitcoin vs Traditional Money</h3>
-                    <p>Learn the key differences between Bitcoin and fiat currencies, and why Bitcoin is superior money.</p>
-                </div>
-                <div class="module-card" onclick="openModule('module3')">
-                    <div class="module-number">03</div>
-                    <h3>Getting Your First Bitcoin</h3>
-                    <p>Step-by-step guide to buying your first satoshis safely and securely.</p>
-                </div>
-                <div class="module-card" onclick="openModule('module4')">
-                    <div class="module-number">04</div>
-                    <h3>Wallets & Security</h3>
-                    <p>Learn about different types of wallets and how to keep your Bitcoin secure.</p>
-                </div>
-                <div class="module-card" onclick="openModule('module5')">
-                    <div class="module-number">05</div>
-                    <h3>Dollar Cost Averaging</h3>
-                    <p>Master the strategy of consistent Bitcoin accumulation regardless of price.</p>
-                </div>
-                <div class="module-card" onclick="openModule('module6')">
-                    <div class="module-number">06</div>
-                    <h3>Self-Custody Mastery</h3>
-                    <p>Advanced techniques for securing large amounts of Bitcoin independently.</p>
-                </div>
-                <div class="module-card" onclick="openModule('module7')">
-                    <div class="module-number">07</div>
-                    <h3>Building Your Bitcoin Reserve</h3>
-                    <p>Strategies for accumulating 1+ Bitcoin and building generational wealth.</p>
-                </div>
-                <div class="module-card" onclick="openModule('module8')">
-                    <div class="module-number">08</div>
-                    <h3>Bitcoin's Future</h3>
-                    <p>Understanding Bitcoin's role in the future of money and global finance.</p>
-                </div>
-            </div>
-        </section>
-
         <section id="calculator" class="dca-calculator">
-            <h2 style="text-align: center; margin-bottom: 2rem;">DCA Calculator</h2>
-            <p style="text-align: center; margin-bottom: 3rem;">See how consistent Bitcoin purchases can build wealth over time</p>
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #ffd700;">DCA Calculator</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: #e3f2fd;">See how consistent Bitcoin purchases can build wealth over time</p>
             
             <div class="calculator-grid">
                 <div>
@@ -679,7 +348,7 @@
                         </select>
                     </div>
                     <div class="input-group">
-                        <label for="btcPrice">Current BTC Price ($)</label>
+                        <label for="btcPrice">Current BTC Price ($) - Live ✅</label>
                         <input type="number" id="btcPrice" value="45000" min="1">
                     </div>
                     <div class="input-group">
@@ -711,705 +380,9 @@
                 </div>
             </div>
         </section>
-
-        <section id="adoption" class="institutional-adoption">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Institutional Adoption</h2>
-            <p style="text-align: center; margin-bottom: 3rem;">Major institutions are building Bitcoin reserves. Join the movement.</p>
-            
-            <div class="adoption-grid">
-                <div class="company-card">
-                    <div class="company-logo">BR</div>
-                    <h3>BlackRock</h3>
-                    <p>World's largest asset manager with Bitcoin ETF holding billions in BTC</p>
-                </div>
-                <div class="company-card">
-                    <div class="company-logo">MS</div>
-                    <h3>MicroStrategy</h3>
-                    <p>Over 150,000 Bitcoin on balance sheet, leading corporate adoption</p>
-                </div>
-                <div class="company-card">
-                    <div class="company-logo">T</div>
-                    <h3>Tesla</h3>
-                    <p>Pioneered corporate Bitcoin treasury strategy with billions invested</p>
-                </div>
-                <div class="company-card">
-                    <div class="company-logo">ES</div>
-                    <h3>El Salvador</h3>
-                    <p>First nation to make Bitcoin legal tender and build national reserves</p>
-                </div>
-                <div class="company-card">
-                    <div class="company-logo">F</div>
-                    <h3>Fidelity</h3>
-                    <p>Major financial services provider offering Bitcoin investment products</p>
-                </div>
-                <div class="company-card">
-                    <div class="company-logo">CB</div>
-                    <h3>Coinbase</h3>
-                    <p>Public company holding significant Bitcoin reserves and serving institutions</p>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- Module Modals -->
-    <div id="moduleModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div id="moduleContentArea"></div>
-        </div>
-    </div>
-
     <script>
-        // Module content data
-        const moduleContent = {
-            module1: {
-                title: "What is Bitcoin?",
-                content: `
-                    <h3>Introduction to Bitcoin</h3>
-                    <p>Bitcoin is a revolutionary form of digital money that operates without central control. Created in 2008 by the pseudonymous Satoshi Nakamoto, it represents the first successful implementation of a peer-to-peer electronic cash system.</p>
-                    
-                    <h3>Key Characteristics</h3>
-                    <ul>
-                        <li><strong>Decentralized:</strong> No single authority controls Bitcoin</li>
-                        <li><strong>Limited Supply:</strong> Only 21 million Bitcoin will ever exist</li>
-                        <li><strong>Digital:</strong> Exists only in digital form, secured by cryptography</li>
-                        <li><strong>Transparent:</strong> All transactions are recorded on a public ledger</li>
-                        <li><strong>Borderless:</strong> Can be sent anywhere in the world instantly</li>
-                    </ul>
-                    
-                    <h3>How Bitcoin Works</h3>
-                    <p>Bitcoin operates on a technology called blockchain - a distributed ledger that maintains a continuously growing list of records (blocks) that are linked and secured using cryptography. This system ensures that:</p>
-                    <ul>
-                        <li>Transactions cannot be reversed or altered</li>
-                        <li>New Bitcoin is created through a process called mining</li>
-                        <li>The network is maintained by thousands of computers worldwide</li>
-                        <li>No intermediary is needed for transactions</li>
-                    </ul>
-                    
-                    <h3>Why Bitcoin Matters</h3>
-                    <p>Bitcoin represents a fundamental shift in how we think about money. It offers:</p>
-                    <ul>
-                        <li>Protection against inflation through fixed supply</li>
-                        <li>Financial sovereignty and independence</li>
-                        <li>Access to a global financial system</li>
-                        <li>Store of value that cannot be confiscated or devalued by governments</li>
-                    </ul>
-                `
-            },
-            module2: {
-                title: "Bitcoin vs Traditional Money",
-                content: `
-                    <h3>The Problem with Fiat Money</h3>
-                    <p>Traditional government-issued currencies (fiat money) have several fundamental flaws:</p>
-                    <ul>
-                        <li><strong>Unlimited Supply:</strong> Central banks can print money at will, causing inflation</li>
-                        <li><strong>Centralized Control:</strong> Governments and banks control your money</li>
-                        <li><strong>Debasement:</strong> Currency loses value over time through monetary expansion</li>
-                        <li><strong>Barriers:</strong> Traditional banking excludes billions of people globally</li>
-                    </ul>
-                    
-                    <h3>Bitcoin's Superior Properties</h3>
-                    <p>Bitcoin solves these problems by being:</p>
-                    <ul>
-                        <li><strong>Scarce:</strong> Fixed supply of 21 million coins prevents inflation</li>
-                        <li><strong>Decentralized:</strong> No single point of failure or control</li>
-                        <li><strong>Divisible:</strong> Each Bitcoin can be divided into 100 million satoshis</li>
-                        <li><strong>Portable:</strong> Entire wealth can be stored in your mind (seed phrase)</li>
-                        <li><strong>Durable:</strong> Cannot be destroyed, exists as long as network operates</li>
-                        <li><strong>Verifiable:</strong> Mathematical proof replaces trust in institutions</li>
-                    </ul>
-                    
-                    <h3>Historical Context</h3>
-                    <p>Throughout history, the best money has always had these characteristics. Gold served as money for thousands of years because it was scarce, durable, and divisible. Bitcoin improves on gold by being:</p>
-                    <ul>
-                        <li>More portable (digital vs physical)</li>
-                        <li>More divisible (8 decimal places vs gold's physical limits)</li>
-                        <li>More verifiable (cryptographic proof vs assaying)</li>
-                        <li>More resistant to seizure</li>
-                    </ul>
-                    
-                    <h3>The Cantillon Effect</h3>
-                    <p>When new money is created, those closest to the source benefit first, while others experience rising prices later. Bitcoin eliminates this unfair advantage by having a predictable, transparent monetary policy that treats everyone equally.</p>
-                `
-            },
-            module3: {
-                title: "Getting Your First Bitcoin",
-                content: `
-                    <h3>Step 1: Choose a Reputable Exchange</h3>
-                    <p>Select a well-established cryptocurrency exchange to make your first purchase:</p>
-                    <ul>
-                        <li><strong>Coinbase:</strong> User-friendly, great for beginners, higher fees</li>
-                        <li><strong>Kraken:</strong> Lower fees, more advanced features, excellent security</li>
-                        <li><strong>Binance:</strong> Lowest fees, largest selection, more complex interface</li>
-                        <li><strong>Swan Bitcoin:</strong> Bitcoin-only, automatic DCA, educational focus</li>
-                    </ul>
-                    
-                    <h3>Step 2: Complete Verification</h3>
-                    <p>Most exchanges require identity verification (KYC) which typically includes:</p>
-                    <ul>
-                        <li>Government-issued photo ID</li>
-                        <li>Proof of address (utility bill or bank statement)</li>
-                        <li>Phone number verification</li>
-                        <li>Email confirmation</li>
-                    </ul>
-                    
-                    <h3>Step 3: Fund Your Account</h3>
-                    <p>Add money to your exchange account using:</p>
-                    <ul>
-                        <li><strong>Bank Transfer (ACH):</strong> Lowest fees, 3-5 day wait</li>
-                        <li><strong>Wire Transfer:</strong> Higher fees, same-day processing</li>
-                        <li><strong>Debit Card:</strong> Instant, highest fees (3-4%)</li>
-                        <li><strong>Credit Card:</strong> Not recommended due to cash advance fees</li>
-                    </ul>
-                    
-                    <h3>Step 4: Make Your First Purchase</h3>
-                    <p>Start small while you're learning:</p>
-                    <ul>
-                        <li>Consider starting with $25-100 for your first purchase</li>
-                        <li>Use market orders for simplicity</li>
-                        <li>Don't try to time the market - focus on learning</li>
-                        <li>Save screenshots/records for tax purposes</li>
-                    </ul>
-                    
-                    <h3>Step 5: Secure Your Bitcoin</h3>
-                    <p>Don't leave large amounts on exchanges:</p>
-                    <ul>
-                        <li>Small amounts ($500 or less) can stay on reputable exchanges</li>
-                        <li>For larger amounts, move to a personal wallet</li>
-                        <li>Write down your wallet seed phrase and store it safely</li>
-                        <li>Never share your private keys or seed phrase</li>
-                    </ul>
-                    
-                    <h3>Common Mistakes to Avoid</h3>
-                    <ul>
-                        <li>Buying during FOMO peaks - stick to your plan</li>
-                        <li>Trying to day trade - most people lose money</li>
-                        <li>Neglecting security - use strong passwords and 2FA</li>
-                        <li>Forgetting about taxes - Bitcoin sales are taxable events</li>
-                        <li>Investing more than you can afford to lose</li>
-                    </ul>
-                `
-            },
-            module4: {
-                title: "Wallets & Security",
-                content: `
-                    <h3>Types of Bitcoin Wallets</h3>
-                    
-                    <h4>Hot Wallets (Connected to Internet)</h4>
-                    <ul>
-                        <li><strong>Mobile Wallets:</strong> Blue Wallet, Electrum, Exodus</li>
-                        <li><strong>Desktop Wallets:</strong> Electrum, Bitcoin Core, Wasabi</li>
-                        <li><strong>Web Wallets:</strong> Convenient but less secure</li>
-                        <li><strong>Pros:</strong> Easy to use, quick transactions</li>
-                        <li><strong>Cons:</strong> Vulnerable to hacking, malware</li>
-                    </ul>
-                    
-                    <h4>Cold Wallets (Offline Storage)</h4>
-                    <ul>
-                        <li><strong>Hardware Wallets:</strong> Ledger, Trezor, Coldcard</li>
-                        <li><strong>Paper Wallets:</strong> Private keys written on paper</li>
-                        <li><strong>Steel Wallets:</strong> Seed phrases etched in metal</li>
-                        <li><strong>Pros:</strong> Maximum security, immune to online attacks</li>
-                        <li><strong>Cons:</strong> Less convenient for frequent transactions</li>
-                    </ul>
-                    
-                    <h3>Security Best Practices</h3>
-                    
-                    <h4>Seed Phrase Security</h4>
-                    <ul>
-                        <li>Write down your 12 or 24-word seed phrase offline</li>
-                        <li>Never store it digitally (photos, cloud, email)</li>
-                        <li>Make multiple physical copies</li>
-                        <li>Store copies in different secure locations</li>
-                        <li>Consider using a passphrase for additional security</li>
-                    </ul>
-                    
-                    <h4>General Security Guidelines</h4>
-                    <ul>
-                        <li>Use strong, unique passwords for all accounts</li>
-                        <li>Enable two-factor authentication (2FA)</li>
-                        <li>Keep software updated</li>
-                        <li>Use dedicated devices for large holdings</li>
-                        <li>Be cautious of phishing attempts</li>
-                        <li>Verify wallet addresses before sending</li>
-                    </ul>
-                    
-                    <h3>Multi-Signature Wallets</h3>
-                    <p>For advanced security, consider multi-sig wallets that require multiple signatures to spend Bitcoin:</p>
-                    <ul>
-                        <li><strong>2-of-3 Setup:</strong> Three keys, any two needed to spend</li>
-                        <li><strong>Benefits:</strong> Protection against single point of failure</li>
-                        <li><strong>Use Cases:</strong> Business accounts, large personal holdings</li>
-                        <li><strong>Services:</strong> Casa, Unchained Capital, Electrum</li>
-                    </ul>
-                    
-                    <h3>Inheritance Planning</h3>
-                    <p>Plan for passing your Bitcoin to heirs:</p>
-                    <ul>
-                        <li>Document wallet locations and instructions</li>
-                        <li>Consider time-locked transactions</li>
-                        <li>Use professional inheritance services</li>
-                        <li>Educate trusted family members</li>
-                        <li>Regular check that recovery info still works</li>
-                    </ul>
-                `
-            },
-            module5: {
-                title: "Dollar Cost Averaging",
-                content: `
-                    <h3>What is Dollar Cost Averaging (DCA)?</h3>
-                    <p>Dollar Cost Averaging is an investment strategy where you buy a fixed dollar amount of Bitcoin at regular intervals, regardless of the price. This approach helps reduce the impact of volatility and removes the stress of trying to time the market.</p>
-                    
-                    <h3>Why DCA Works for Bitcoin</h3>
-                    <ul>
-                        <li><strong>Reduces Volatility Impact:</strong> You buy more when prices are low, less when high</li>
-                        <li><strong>Eliminates Timing Decisions:</strong> No need to predict market movements</li>
-                        <li><strong>Builds Discipline:</strong> Creates consistent saving and investment habits</li>
-                        <li><strong>Psychological Benefits:</strong> Reduces stress and emotional trading</li>
-                        <li><strong>Long-term Focus:</strong> Aligns with Bitcoin's long-term growth potential</li>
-                    </ul>
-                    
-                    <h3>Setting Up Your DCA Strategy</h3>
-                    
-                    <h4>1. Determine Your Budget</h4>
-                    <ul>
-                        <li>Start with what you can afford to lose</li>
-                        <li>Consider 5-10% of income for aggressive savers</li>
-                        <li>Even $25-50/month can build wealth over time</li>
-                        <li>Increase gradually as income grows</li>
-                    </ul>
-                    
-                    <h4>2. Choose Your Frequency</h4>
-                    <ul>
-                        <li><strong>Weekly:</strong> Most dollar-cost averaging benefit</li>
-                        <li><strong>Bi-weekly:</strong> Aligns with paycheck schedule</li>
-                        <li><strong>Monthly:</strong> Good balance of simplicity and effectiveness</li>
-                        <li><strong>Daily:</strong> Maximum smoothing but higher fees</li>
-                    </ul>
-                    
-                    <h4>3. Automate the Process</h4>
-                    <ul>
-                        <li>Use exchange auto-buy features</li>
-                        <li>Set up automatic bank transfers</li>
-                        <li>Consider Bitcoin-focused services like Swan or River</li>
-                        <li>Review and adjust quarterly</li>
-                    </ul>
-                    
-                    <h3>DCA vs Lump Sum Investing</h3>
-                    <p>While lump sum investing can theoretically provide better returns in rising markets, DCA offers:</p>
-                    <ul>
-                        <li>Lower psychological barriers to entry</li>
-                        <li>Protection against bad timing</li>
-                        <li>More sustainable for most people</li>
-                        <li>Better for building long-term habits</li>
-                    </ul>
-                    
-                    <h3>Advanced DCA Strategies</h3>
-                    
-                    <h4>Value Averaging</h4>
-                    <ul>
-                        <li>Adjust purchase amounts based on portfolio value</li>
-                        <li>Buy more when behind target, less when ahead</li>
-                        <li>More complex but potentially more effective</li>
-                    </ul>
-                    
-                    <h4>DCA with Dips</h4>
-                    <ul>
-                        <li>Increase purchases during significant price drops</li>
-                        <li>Keep extra cash reserves for opportunities</li>
-                        <li>Define "dip" criteria in advance (e.g., 20% drop)</li>
-                    </ul>
-                    
-                    <h3>Measuring DCA Success</h3>
-                    <ul>
-                        <li>Track total Bitcoin accumulated, not just dollar value</li>
-                        <li>Focus on long-term trends (4+ years)</li>
-                        <li>Compare against holding cash or other investments</li>
-                        <li>Celebrate consistency over short-term gains</li>
-                    </ul>
-                `
-            },
-            module6: {
-                title: "Self-Custody Mastery",
-                content: `
-                    <h3>Why Self-Custody Matters</h3>
-                    <p>"Not your keys, not your Bitcoin." Self-custody means you control your Bitcoin private keys, giving you complete ownership and control. This is especially critical as your holdings grow beyond $10,000.</p>
-                    
-                    <h3>Levels of Self-Custody</h3>
-                    
-                    <h4>Level 1: Basic Self-Custody ($1K - $10K)</h4>
-                    <ul>
-                        <li>Single hardware wallet (Ledger Nano S Plus, Trezor One)</li>
-                        <li>Seed phrase backed up on paper/metal</li>
-                        <li>Stored in one secure location</li>
-                        <li>Simple but effective for smaller amounts</li>
-                    </ul>
-                    
-                    <h4>Level 2: Enhanced Security ($10K - $100K)</h4>
-                    <ul>
-                        <li>Premium hardware wallet (Ledger Nano X, Trezor Model T)</li>
-                        <li>Multiple seed phrase backups in different locations</li>
-                        <li>Consider using a passphrase (25th word)</li>
-                        <li>Regular security audits and testing</li>
-                    </ul>
-                    
-                    <h4>Level 3: Advanced Security ($100K+)</h4>
-                    <ul>
-                        <li>Multi-signature wallets (2-of-3 or 3-of-5)</li>
-                        <li>Geographic distribution of keys</li>
-                        <li>Professional-grade storage solutions</li>
-                        <li>Inheritance planning integration</li>
-                    </ul>
-                    
-                    <h3>Hardware Wallet Comparison</h3>
-                    
-                    <h4>Ledger Series</h4>
-                    <ul>
-                        <li><strong>Pros:</strong> User-friendly, wide coin support, mobile app</li>
-                        <li><strong>Cons:</strong> Closed source, past data breaches</li>
-                        <li><strong>Best for:</strong> Beginners, multi-coin holders</li>
-                    </ul>
-                    
-                    <h4>Trezor Series</h4>
-                    <ul>
-                        <li><strong>Pros:</strong> Open source, excellent reputation, advanced features</li>
-                        <li><strong>Cons:</strong> Higher price, steeper learning curve</li>
-                        <li><strong>Best for:</strong> Privacy-conscious users, Bitcoin maximalists</li>
-                    </ul>
-                    
-                    <h4>Coldcard</h4>
-                    <ul>
-                        <li><strong>Pros:</strong> Bitcoin-only, air-gapped, maximum security</li>
-                        <li><strong>Cons:</strong> Complex interface, Bitcoin-only</li>
-                        <li><strong>Best for:</strong> Advanced users, large holdings</li>
-                    </ul>
-                    
-                    <h3>Multi-Signature Setup</h3>
-                    
-                    <h4>2-of-3 Configuration</h4>
-                    <ul>
-                        <li>Three signing devices, any two required</li>
-                        <li>One key at home, one at work/family, one in safe deposit box</li>
-                        <li>Protection against single device failure</li>
-                        <li>Balance of security and accessibility</li>
-                    </ul>
-                    
-                    <h4>3-of-5 Configuration</h4>
-                    <ul>
-                        <li>Five keys total, three required to spend</li>
-                        <li>Maximum redundancy and security</li>
-                        <li>Can lose two keys and still access funds</li>
-                        <li>Suitable for very large holdings</li>
-                    </ul>
-                    
-                    <h3>Operational Security (OpSec)</h3>
-                    
-                    <h4>Physical Security</h4>
-                    <ul>
-                        <li>Use fireproof/waterproof storage for seed phrases</li>
-                        <li>Consider safe deposit boxes for backup keys</li>
-                        <li>Maintain privacy about your holdings</li>
-                        <li>Use decoy wallets with small amounts</li>
-                    </ul>
-                    
-                    <h4>Digital Security</h4>
-                    <ul>
-                        <li>Use dedicated computer for Bitcoin operations</li>
-                        <li>Verify all software downloads</li>
-                        <li>Use Tor for enhanced privacy</li>
-                        <li>Regular security audits</li>
-                    </ul>
-                    
-                    <h3>Testing and Maintenance</h3>
-                    <ul>
-                        <li>Test recovery process annually</li>
-                        <li>Update firmware regularly</li>
-                        <li>Check backup integrity</li>
-                        <li>Document procedures for heirs</li>
-                        <li>Plan for device obsolescence</li>
-                    </ul>
-                `
-            },
-            module7: {
-                title: "Building Your Bitcoin Reserve",
-                content: `
-                    <h3>The 1 Bitcoin Goal</h3>
-                    <p>Owning 1 full Bitcoin puts you in an exclusive group. With only 21 million Bitcoin ever to exist and billions of people in the world, reaching 1 Bitcoin is a significant achievement that represents true financial sovereignty.</p>
-                    
-                    <h3>Accumulation Strategies</h3>
-                    
-                    <h4>Consistent DCA Approach</h4>
-                    <ul>
-                        <li><strong>$500/month for 4 years</strong> (assuming $50K average price)</li>
-                        <li><strong>$1000/month for 2 years</strong> (more aggressive approach)</li>
-                        <li><strong>$250/month for 8 years</strong> (slower but sustainable)</li>
-                        <li>Adjust based on price movements and income changes</li>
-                    </ul>
-                    
-                    <h4>Income Optimization</h4>
-                    <ul>
-                        <li>Negotiate salary increases</li>
-                        <li>Develop high-income skills</li>
-                        <li>Create additional income streams</li>
-                        <li>Freelancing in Bitcoin/crypto space</li>
-                        <li>Consider part-time work specifically for Bitcoin buying</li>
-                    </ul>
-                    
-                    <h4>Expense Reduction</h4>
-                    <ul>
-                        <li>Track and eliminate unnecessary subscriptions</li>
-                        <li>Reduce dining out and entertainment expenses</li>
-                        <li>Consider downsizing or house hacking</li>
-                        <li>Buy used instead of new for major purchases</li>
-                        <li>Redirect tax refunds and bonuses to Bitcoin</li>
-                    </ul>
-                    
-                    <h3>Advanced Accumulation Techniques</h3>
-                    
-                    <h4>Mining Revenue</h4>
-                    <ul>
-                        <li>Set up home mining operation</li>
-                        <li>Join mining pools for consistent returns</li>
-                        <li>Consider cloud mining (higher risk)</li>
-                        <li>Use excess renewable energy</li>
-                    </ul>
-                    
-                    <h4>Bitcoin-Denominated Earnings</h4>
-                    <ul>
-                        <li>Negotiate salary payments in Bitcoin</li>
-                        <li>Offer services priced in Bitcoin</li>
-                        <li>Accept Bitcoin for business revenue</li>
-                        <li>Participate in Bitcoin-native economy</li>
-                    </ul>
-                    
-                    <h4>Strategic Debt Use</h4>
-                    <ul>
-                        <li>Low-interest debt to buy Bitcoin (high risk)</li>
-                        <li>Mortgage against Bitcoin holdings</li>
-                        <li>Business loans for Bitcoin purchases</li>
-                        <li><strong>Warning:</strong> Only for sophisticated investors</li>
-                    </ul>
-                    
-                    <h3>Psychological Aspects</h3>
-                    
-                    <h4>Dealing with Volatility</h4>
-                    <ul>
-                        <li>Focus on Bitcoin accumulation, not dollar value</li>
-                        <li>Understand that volatility decreases over time</li>
-                        <li>Use dollar-cost averaging to smooth emotions</li>
-                        <li>Study Bitcoin's long-term trajectory</li>
-                    </ul>
-                    
-                    <h4>Staying Motivated</h4>
-                    <ul>
-                        <li>Track your progress in satoshis</li>
-                        <li>Connect with Bitcoin community</li>
-                        <li>Regularly review your "why"</li>
-                        <li>Celebrate milestones (0.1, 0.25, 0.5, 1.0 BTC)</li>
-                    </ul>
-                    
-                    <h3>Beyond 1 Bitcoin</h3>
-                    
-                    <h4>Multi-Bitcoin Holdings</h4>
-                    <ul>
-                        <li>Enhanced financial independence</li>
-                        <li>Generational wealth building</li>
-                        <li>Ability to live off Bitcoin-backed loans</li>
-                        <li>Maximum benefit from network effects</li>
-                    </ul>
-                    
-                    <h4>Portfolio Allocation</h4>
-                    <ul>
-                        <li>Start with 5-10% of net worth</li>
-                        <li>Gradually increase to 25-50% for believers</li>
-                        <li>Some maximalists go 80-90%+</li>
-                        <li>Balance with risk tolerance and life stage</li>
-                    </ul>
-                    
-                    <h3>Tax Considerations</h3>
-                    <ul>
-                        <li>Understand local tax laws</li>
-                        <li>Track cost basis for all purchases</li>
-                        <li>Consider tax-advantaged accounts (401k, IRA)</li>
-                        <li>Plan for tax-efficient liquidation strategies</li>
-                        <li>Consider relocating to Bitcoin-friendly jurisdictions</li>
-                    </ul>
-                `
-            },
-            module8: {
-                title: "Bitcoin's Future",
-                content: `
-                    <h3>The Path to Global Adoption</h3>
-                    <p>Bitcoin is still in its early stages, with massive room for growth. Current global adoption is estimated at less than 5%, similar to the internet in the mid-1990s.</p>
-                    
-                    <h3>Institutional Adoption Trends</h3>
-                    
-                    <h4>Corporate Treasuries</h4>
-                    <ul>
-                        <li>MicroStrategy leads with 150,000+ Bitcoin</li>
-                        <li>Tesla, Block, Marathon Digital following suit</li>
-                        <li>Trend toward Bitcoin as treasury reserve asset</li>
-                        <li>Protection against currency debasement</li>
-                    </ul>
-                    
-                    <h4>Financial Services</h4>
-                    <ul>
-                        <li>BlackRock, Fidelity launching Bitcoin ETFs</li>
-                        <li>Major banks offering Bitcoin custody</li>
-                        <li>Payment processors integrating Bitcoin</li>
-                        <li>Traditional finance embracing digital assets</li>
-                    </ul>
-                    
-                    <h4>Nation-State Adoption</h4>
-                    <ul>
-                        <li>El Salvador making Bitcoin legal tender</li>
-                        <li>Other countries considering similar moves</li>
-                        <li>Central banks studying Bitcoin reserves</li>
-                        <li>Geopolitical advantages of Bitcoin adoption</li>
-                    </ul>
-                    
-                    <h3>Technology Development</h3>
-                    
-                    <h4>Lightning Network</h4>
-                    <ul>
-                        <li>Instant, low-cost Bitcoin payments</li>
-                        <li>Scaling Bitcoin to billions of users</li>
-                        <li>Growing adoption by businesses and apps</li>
-                        <li>Enabling Bitcoin micropayments</li>
-                    </ul>
-                    
-                    <h4>Privacy Improvements</h4>
-                    <ul>
-                        <li>Taproot upgrade enhancing privacy</li>
-                        <li>CoinJoin and mixing services</li>
-                        <li>Future privacy protocol developments</li>
-                        <li>Balance between privacy and compliance</li>
-                    </ul>
-                    
-                    <h4>Smart Contracts</h4>
-                    <ul>
-                        <li>Simple smart contracts on Bitcoin</li>
-                        <li>Time-locked transactions</li>
-                        <li>Multi-signature improvements</li>
-                        <li>Decentralized finance on Bitcoin</li>
-                    </ul>
-                    
-                    <h3>Economic Impact</h3>
-                    
-                    <h4>Monetary System Changes</h4>
-                    <ul>
-                        <li>Potential return to sound money principles</li>
-                        <li>Reduced government monetary control</li>
-                        <li>Global financial system reformation</li>
-                        <li>End of currency wars and manipulation</li>
-                    </ul>
-                    
-                    <h4>Wealth Distribution</h4>
-                    <ul>
-                        <li>Early adopters benefit most</li>
-                        <li>Democratization of sound money</li>
-                        <li>Reduced inequality from inflation</li>
-                        <li>Global access to store of value</li>
-                    </ul>
-                    
-                    <h3>Price Predictions and Models</h3>
-                    
-                    <h4>Stock-to-Flow Model</h4>
-                    <ul>
-                        <li>Based on Bitcoin's scarcity</li>
-                        <li>Predicts significant price appreciation</li>
-                        <li>Historical accuracy with some deviations</li>
-                        <li>Suggests $100K+ Bitcoin possible</li>
-                    </ul>
-                    
-                    <h4>Network Value Models</h4>
-                    <ul>
-                        <li>Metcalfe's Law: value proportional to users squared</li>
-                        <li>Network effects driving value</li>
-                        <li>Adoption curves suggesting exponential growth</li>
-                        <li>Comparison to other network technologies</li>
-                    </ul>
-                    
-                    <h3>Potential Challenges</h3>
-                    
-                    <h4>Regulatory Risks</h4>
-                    <ul>
-                        <li>Government attempts to ban or restrict</li>
-                        <li>Taxation and compliance burdens</li>
-                        <li>Central bank digital currencies (CBDCs)</li>
-                        <li>International coordination efforts</li>
-                    </ul>
-                    
-                    <h4>Technical Risks</h4>
-                    <ul>
-                        <li>Quantum computing threats</li>
-                        <li>Scaling challenges</li>
-                        <li>Energy consumption concerns</li>
-                        <li>Developer consensus issues</li>
-                    </ul>
-                    
-                    <h3>Long-term Vision</h3>
-                    
-                    <h4>Bitcoin as Reserve Asset</h4>
-                    <ul>
-                        <li>Central banks holding Bitcoin reserves</li>
-                        <li>International trade settlement in Bitcoin</li>
-                        <li>Replacement for gold in monetary system</li>
-                        <li>Foundation for new financial infrastructure</li>
-                    </ul>
-                    
-                    <h4>Hyperbitcoinization</h4>
-                    <ul>
-                        <li>Scenario where Bitcoin becomes dominant money</li>
-                        <li>Fiat currencies become obsolete</li>
-                        <li>Global standard of value</li>
-                        <li>Complete monetary system transformation</li>
-                    </ul>
-                    
-                    <h3>Your Role in Bitcoin's Future</h3>
-                    <ul>
-                        <li>Every satoshi you accumulate matters</li>
-                        <li>Education and advocacy help adoption</li>
-                        <li>Supporting Bitcoin businesses and services</li>
-                        <li>Building on Bitcoin's infrastructure</li>
-                        <li>Preserving and protecting the network</li>
-                    </ul>
-                `
-            }
-        };
-
-        // Quiz questions for each module
-        const quizzes = {
-            module1: [
-                {
-                    question: "What is the maximum supply of Bitcoin?",
-                    options: ["21 million", "100 million", "No limit", "50 million"],
-                    correct: 0
-                },
-                {
-                    question: "Who created Bitcoin?",
-                    options: ["Elon Musk", "Satoshi Nakamoto", "Vitalik Buterin", "Jeff Bezos"],
-                    correct: 1
-                }
-            ],
-            module2: [
-                {
-                    question: "What is the main problem with fiat money?",
-                    options: ["It's too heavy", "Unlimited supply", "It's digital", "It's too secure"],
-                    correct: 1
-                },
-                {
-                    question: "How many satoshis are in one Bitcoin?",
-                    options: ["1 million", "10 million", "100 million", "1 billion"],
-                    correct: 2
-                }
-            ]
-        };
-
-        let currentProgress = 0;
-        let completedModules = new Set();
-
-        // Calculator functionality
         function updateCalculator() {
             const monthlyAmount = parseFloat(document.getElementById('monthlyAmount').value) || 100;
             const timeFrame = parseInt(document.getElementById('timeFrame').value) || 2;
@@ -1423,14 +396,29 @@
             const returnPercentage = ((totalReturn / totalInvested) * 100).toFixed(0);
             const satoshiCount = Math.floor(btcAccumulated * 100000000);
 
-            document.getElementById('totalInvested').textContent = `${totalInvested.toLocaleString()}`;
+            document.getElementById('totalInvested').textContent = `$${totalInvested.toLocaleString()}`;
             document.getElementById('btcAccumulated').textContent = `${btcAccumulated.toFixed(3)} BTC`;
-            document.getElementById('portfolioValue').textContent = `${portfolioValue.toLocaleString()}`;
-            document.getElementById('totalReturn').textContent = `${totalReturn.toLocaleString()} (${returnPercentage}%)`;
+            document.getElementById('portfolioValue').textContent = `$${portfolioValue.toLocaleString()}`;
+            document.getElementById('totalReturn').textContent = `$${totalReturn.toLocaleString()} (${returnPercentage}%)`;
             document.getElementById('satoshiCount').textContent = `${satoshiCount.toLocaleString()} Satoshis`;
         }
 
-        // Add event listeners for calculator inputs
+        async function fetchLiveBitcoinPrice() {
+            try {
+                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+                const data = await response.json();
+                const currentPrice = Math.round(data.bitcoin.usd);
+                
+                document.getElementById('btcPrice').value = currentPrice;
+                updateCalculator();
+                
+                console.log(`Bitcoin price updated: $${currentPrice.toLocaleString()}`);
+                
+            } catch (error) {
+                console.log('Using default price - API unavailable');
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             const calculatorInputs = ['monthlyAmount', 'timeFrame', 'btcPrice', 'annualReturn'];
             calculatorInputs.forEach(id => {
@@ -1440,245 +428,13 @@
                 }
             });
             updateCalculator();
+            
+            // Fetch live price on page load
+            fetchLiveBitcoinPrice();
+            
+            // Update price every 5 minutes
+            setInterval(fetchLiveBitcoinPrice, 300000);
         });
-
-        // Modal functionality
-        function openModule(moduleId) {
-            const modal = document.getElementById('moduleModal');
-            const contentArea = document.getElementById('moduleContentArea');
-            const module = moduleContent[moduleId];
-            
-            if (module) {
-                contentArea.innerHTML = `
-                    <h2>${module.title}</h2>
-                    <div class="module-content">
-                        ${module.content}
-                    </div>
-                    ${quizzes[moduleId] ? createQuiz(moduleId) : ''}
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <button onclick="completeModule('${moduleId}')" class="cta-button">Mark Complete</button>
-                    </div>
-                `;
-                modal.style.display = 'block';
-            }
-        }
-
-        function createQuiz(moduleId) {
-            const moduleQuiz = quizzes[moduleId];
-            if (!moduleQuiz) return '';
-            
-            let quizHTML = '<div class="quiz-section"><h3>Knowledge Check</h3>';
-            
-            moduleQuiz.forEach((q, index) => {
-                quizHTML += `
-                    <div class="quiz-question">${q.question}</div>
-                    <div class="quiz-options">
-                        ${q.options.map((option, optIndex) =>
-                            `<div class="quiz-option" onclick="selectOption(${index}, ${optIndex})" data-question="${index}" data-option="${optIndex}">${option}</div>`
-                        ).join('')}
-                    </div>
-                `;
-            });
-            
-            quizHTML += '</div>';
-            return quizHTML;
-        }
-
-        function selectOption(questionIndex, optionIndex) {
-            const options = document.querySelectorAll(`[data-question="${questionIndex}"]`);
-            options.forEach(option => option.classList.remove('selected'));
-            
-            const selectedOption = document.querySelector(`[data-question="${questionIndex}"][data-option="${optionIndex}"]`);
-            selectedOption.classList.add('selected');
-        }
-
-        function closeModal() {
-            document.getElementById('moduleModal').style.display = 'none';
-        }
-
-        function completeModule(moduleId) {
-            if (!completedModules.has(moduleId)) {
-                completedModules.add(moduleId);
-                updateProgress();
-                
-                // Visual feedback
-                const moduleCard = document.querySelector(`[onclick="openModule('${moduleId}')"]`);
-                if (moduleCard) {
-                    moduleCard.style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
-                    moduleCard.innerHTML += '<div style="position: absolute; top: 10px; left: 10px; background: white; color: #4CAF50; padding: 5px 10px; border-radius: 15px; font-weight: bold; font-size: 0.8rem;">✓ Complete</div>';
-                }
-                
-                alert('Module completed! Great job on your Bitcoin education journey.');
-            }
-            closeModal();
-        }
-
-        function updateProgress() {
-            const totalModules = Object.keys(moduleContent).length;
-            const completedCount = completedModules.size;
-            const progressPercentage = Math.round((completedCount / totalModules) * 100);
-            
-            document.getElementById('progressFill').style.width = `${progressPercentage}%`;
-            document.getElementById('progressText').textContent = `${progressPercentage}% Complete (${completedCount}/${totalModules} modules)`;
-            
-            // Motivational messages based on progress
-            let message = '';
-            if (progressPercentage === 0) message = 'Start your Bitcoin journey today!';
-            else if (progressPercentage < 25) message = 'Great start! Keep learning about Bitcoin.';
-            else if (progressPercentage < 50) message = 'You\'re making excellent progress!';
-            else if (progressPercentage < 75) message = 'Halfway there! You\'re becoming a Bitcoin expert.';
-            else if (progressPercentage < 100) message = 'Almost done! Finish strong!';
-            else message = 'Congratulations! You\'ve mastered Bitcoin basics. Time to start building your reserve!';
-            
-            document.getElementById('progressText').innerHTML += `<br><em>${message}</em>`;
-        }
-
-        // Smooth scrolling for navigation
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    if (targetSection) {
-                        targetSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-
-        // Animate stats on scroll
-        function animateStats() {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const target = entry.target;
-                        const finalValue = target.textContent;
-                        animateNumber(target, finalValue);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            statNumbers.forEach(stat => observer.observe(stat));
-        }
-
-        function animateNumber(element, finalValue) {
-            // Simple number animation for the stats
-            element.style.transform = 'scale(1.2)';
-            setTimeout(() => {
-                element.style.transform = 'scale(1)';
-            }, 300);
-        }
-
-        // Initialize animations
-        document.addEventListener('DOMContentLoaded', function() {
-            animateStats();
-            updateCalculator();
-            
-            // Add some interactive hover effects
-            const moduleCards = document.querySelectorAll('.module-card');
-            moduleCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-        });
-
-        // Close modal when clicking outside
-        window.addEventListener('click', function(event) {
-            const modal = document.getElementById('moduleModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Add keyboard support for modal
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-        });
-
-        // Motivational quotes that cycle
-        const motivationalQuotes = [
-            "Every satoshi counts - start your journey today!",
-            "The best time to buy Bitcoin was 10 years ago. The second best time is now.",
-            "Bitcoin is hope. Hope for a better financial future.",
-            "21 million Bitcoin. 8 billion people. Do the math.",
-            "Be your own bank. Take control of your financial future.",
-            "Stack sats. Stay humble. Think long-term.",
-            "Bitcoin doesn't care about your politics, race, or location. It's money for everyone."
-        ];
-
-        let currentQuoteIndex = 0;
-
-        function rotateQuotes() {
-            const quoteElement = document.querySelector('.hero p');
-            if (quoteElement && motivationalQuotes.length > 0) {
-                setInterval(() => {
-                    currentQuoteIndex = (currentQuoteIndex + 1) % motivationalQuotes.length;
-                    quoteElement.style.opacity = '0.5';
-                    setTimeout(() => {
-                        quoteElement.textContent = motivationalQuotes[currentQuoteIndex];
-                        quoteElement.style.opacity = '0.9';
-                    }, 500);
-                }, 8000); // Change quote every 8 seconds
-            }
-        }
-
-        // Initialize quote rotation
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(rotateQuotes, 5000); // Start after 5 seconds
-        });
-
-        // Add mobile menu toggle (if needed)
-        function toggleMobileMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-
-        // Price ticker simulation (for demo purposes)
-        function simulatePriceTicker() {
-            const priceInput = document.getElementById('btcPrice');
-            if (priceInput) {
-                setInterval(() => {
-                    const currentPrice = parseFloat(priceInput.value);
-                    const variation = (Math.random() - 0.5) * 1000; // Random variation
-                    const newPrice = Math.max(1000, currentPrice + variation);
-                    priceInput.value = Math.round(newPrice);
-                   updateCalculator();
-        
-        // Fetch live Bitcoin price
-        fetchLiveBitcoinPrice();
-        
-        // Update price every 5 minutes
-        setInterval(fetchLiveBitcoinPrice, 300000);
-    });
-
-    async function fetchLiveBitcoinPrice() {
-        try {
-            const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
-            const data = await response.json();
-            const currentPrice = Math.round(data.bitcoin.usd);
-            
-            document.getElementById('btcPrice').value = currentPrice;
-            updateCalculator();
-            
-            console.log(`Bitcoin price updated: $${currentPrice.toLocaleString()}`);
-            
-        } catch (error) {
-            console.log('Using default price - API unavailable');
-        }
-    }
     </script>
 </body>
 </html>
